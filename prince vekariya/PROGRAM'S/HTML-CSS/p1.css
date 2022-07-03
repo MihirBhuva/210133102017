@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Rock+3D&display=swap');
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+nav
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #3b2020;
+    padding: 0 20px;
+}
+.logo h1
+{
+    color: rgb(196, 255, 2);
+    text-transform: uppercase;
+    font-family: 'Rock 3D', cursive;
+}
+nav ul li
+{
+    display: inline-block;
+}
+nav ul li a
+{
+    display: inline-block;
+    padding: 15px 20px;
+    text-decoration: none;
+    color: rgb(196, 255, 2);
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 700;
+}
+nav ul li a:hover
+{
+    background-color: rgb(196, 255, 2);
+    color: #3b2020;
+}
+li {
+    display: block;
+    transition-duration: 0.5s;
+   }
+   
+   li:hover {
+     cursor: pointer;
+   }
+   
+   ul li ul {
+     visibility: hidden;
+     opacity: 0;
+     position: absolute;
+     transition: all 0.5s ease;
+     margin-top: 1rem;
+     left: 0;
+     display: none;
+   }
+   
+   ul li:hover > ul,
+   ul li ul:hover {
+     visibility: visible;
+     opacity: 1;
+     display: block;
+   }
+   
+   ul li ul li {
+     clear: both;
+     background: #3b2020;
+     width: 100%;
+   }
