@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Layout-3</title>
+    <style>
+        *
+        {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body{
+        color: black;
+        font-family: sans-serif;
+        text-align:center;
+        font-weight: 550;
+        font-size: 2rem;
+      }
+      .main {
+        box-sizing: border-box;
+        padding: 8px;
+      }
+      #row1{
+        background-color: #626262;
+        height: 100px;
+        margin-top: 6px;
+        line-height: 100px;
+      }
+      #row2{
+        display:flex;
+        margin-top:7px;
+      }
+      .c1{
+        background-color:  #626262;
+        height: 506px;
+        width: 30%;
+        line-height: 506px;
+      }
+      #sidecol1{
+        box-sizing: border-box;
+        margin-left: 8px;
+        width:100%;
+      }
+      .r1c1{
+        background-color: #626262;
+        height: 100px;
+        line-height: 100px;
+      }
+      .r1c2{
+        background-color:#626262;
+        height: 400px;
+        line-height: 400px;
+        margin-top:6px;
+      }
+      #row3{
+        background-color:#626262;
+        height: 100px;
+        margin-top: 6px;
+        line-height: 100px;
+      }
+      h2
+      {
+        color: white;
+      }
+     
+    </style>
+  </head>
+  <body>
+    <div class="main">
+        <div class="container">
+            <div id="row1">
+                <h2>Logo</h2>  
+            </div> 
+            <div id="row2">
+                <div class="c1"><h2>SideBar&Navgation</h2> </div>
+                    <div id="sidecol1">
+                        <div class="r1c1"><h2>Header</h2> </div>
+                        <div class="r1c2"><h2>Body area</h2></div>
+                    </div> 
+            </div> 
+            <div id="row3"><h2>Footer</h2> </div>
+        </div> 
+    </div> 
+    
+  </body>
+</html>
