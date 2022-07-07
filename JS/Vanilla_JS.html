@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/main.js"></script>
+    <style>
+        .box{
+            width: 250px;
+            height: 250px;
+            background: red;
+            margin: 20px;
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+
+
+
+    </style>
+    <script>
+        function alertFun()
+        {
+            alert('Internal script');
+        }
+        function confirmFun()
+        {
+            confirm('Internal script');
+        }
+        function promptFun()
+        {
+           var name=(prompt('Internal script'));
+           document.getElementById('text').innerHTML=name;
+        }
+    </script>
+</head>
+<body>
+    <div class="box" id="color"><h2 id="text"></h2></div><hr>
+    <input type="button" value="alert" onclick="alert('Welcome to page')">
+    <input type="button" value="confirm" onclick="confirm('are you sure?')">
+    <input type="button" value="prompt" onclick="prompt('enter your name')"><hr>
+    <input type="button" value="alert" onclick="alertFun()">
+    <input type="button" value="confirm" onclick="confirmFun()">
+    <input type="button" value="prompt" onclick="promptFun()"><hr>
+    <input type="button" value="alert" onclick="alertFunEx()">
+    <input type="button" value="confirm" onclick="confirmFunEx()">
+    <input type="button" value="prompt" onclick="promptFunEx()"><hr>
+    
+    <input type="color" name="" id="back" onchange="background()">
+    <input type="color" name="" id="div" onchange="divFun()">
+</body>
+</html>
