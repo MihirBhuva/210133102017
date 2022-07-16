@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box-1,
+        #box-2,
+        #box-3
+        {
+            width: 80px;
+            height: 80px;
+            margin: 10px 0;
+            display: none;
+        }
+        #box-1
+        {
+            background: rgb(255, 0, 0);
+        }
+        #box-2
+        {
+            background: rgb(255, 221, 0);
+        }
+        #box-3
+        {
+            background: rgb(38, 255, 0);
+        }
+    </style>
+</head>
+<body>
+    <button id="fadeIn">Fade In</button>
+    <button id="fadeOut">Fade Out</button>
+    <button id="toggle">Fade In/Out</button>
+    <button id="fadBox">Fade Boxes</button>
+    <div id="box-1"></div>
+    <div id="box-2"></div>
+    <div id="box-3"></div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" type="text/javascript"></script>
+<script>
+    $(document).ready(function(){
+        $("#fadeIn").click(function(){
+            $("#box-1").fadeIn();
+            $("#box-2").fadeIn("slow");
+            $("#box-3").fadeIn(3000);
+        });
+
+        $("#fadeOut").click(function(){
+            $("#box-3").fadeOut(3000);
+            $("#box-2").fadeOut("slow");
+            $("#box-1").fadeOut();
+        });
+
+        $("#toggle").click(function(){
+            $("#box-1").fadeToggle();
+            $("#box-2").fadeToggle("slow");
+            $("#box-3").fadeToggle(3000);
+        });
+
+        $("#fadBox").click(function(){
+            $("#box-1").fadeTo("slow", 0.15);
+            $("#box-2").fadeTo("slow", 0.4);
+            $("#box-3").fadeTo("slow", 0.7);
+          });
+    })
+</script>
+</html>

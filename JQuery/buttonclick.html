@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 400px;
+            height: 400px;
+            background: rgb(255, 234, 0);
+            margin: 10px;
+            border-top-left-radius: 25px;
+            border-top-right-radius: 50%;
+            border-bottom-left-radius: 50%;
+            border-bottom-right-radius: 50px;
+            box-shadow: 12px 3px 20px #939393,
+                        inset -12px 6px 20px #9bd53f99,
+                        inset -1px -20px 20px #ff9f0e;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="btn">
+        <input id="btnHide" type="button" value="Hide">
+        <input id="btnShow" type="button" value="Show">
+        <hr>
+        <input id="btnToggle" type="button" value="Hide">
+        <hr>
+        <button id="btnPlus"><b>+</b></button>
+        <button id="btnMinus"><b>-</b></button>
+    </div> 
+    <div class="main-box">
+        <div class="box" id="mybox"></div>
+    </div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" type="text/javascript"></script>
+<script>
+    $(document).ready(function(){
+        $('#btnShow').attr("disabled",true)
+
+        $("#btnHide").click(function(){
+            if(confirm("Are you sure....? ")){
+                $("#mybox").hide(3000);
+                $(this).attr("disabled",true);
+                $("#btnShow").attr("disabled",false);
+                $("#btnToggle").val("Show");
+            }
+        });
+
+        $("#btnShow").click(function(){
+            if(confirm("Are you sure.....?")){
+                $("#mybox").show(3000);
+                $(this).attr("disabled",true);
+                $("#btnHide").attr("disabled",false);
+                $("#btnToggle").val("Hide");
+            }
+        });
+
+        $("#btnToggle").click(function(){
+            if(confirm("Are you sure....?")){
+                $("#mybox").toggle(3000);
+                ($("#btnToggle").val()=="Hide")
+                ?($(this).val("Show"),$("#btnHide").attr("disabled",true),$("#btnShow").attr("disabled",false))
+                :($(this).val("Hide"),$("#btnHide").attr("disabled",false),$("#btnShow").attr("disabled",true))
+            }
+        });
+
+        $('#btnPlus').click(function(){
+            var size=parseInt($('#mybox').css("height"));
+            if(size<=500){
+                size+=10;
+                $('#mybox').css('height',size);
+                $('#mybox').css('width',size);
+            }
+            else{
+                alert("More than 500px is not possible.");
+            }
+        });
+
+        $('#btnMinus').click(function(){
+            var size=parseInt($('#mybox').css("height"));
+            if(size>=20){
+                size-=10;
+                $('#mybox').css('height',size);
+                $('#mybox').css('width',size);
+            }
+            else{
+                alert("More than 500px is not possible.");
+            }
+        });
+    })
+</script>
+
+
+</html>

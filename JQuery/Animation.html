@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+</head>
+<style>
+    #box
+    {
+        width: 80px;
+        height: 80px;
+        margin: 10px 0;
+        position: absolute;
+        background: green;
+    }
+</style>
+<body>
+    <button id="a1">Animation1</button>
+    <button id="a2">Animation2</button>
+    <button id="a3">Animation3</button>
+
+    <div id="box"></div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" type="text/javascript"></script>
+<script>
+    $(document).ready(function(){
+        $("#a1").click(function(){
+            $("#box").animate({left: "250px"})
+        });
+
+        $("#a2").click(function(){
+            $("#box").animate({
+                left: '250px',
+                opacity: '0.5',
+                height:'200px',
+                width: '200px'
+            })
+        });
+
+        $("#a3").click(function(){
+            var box = $('#box')
+            box.animate({left: "250px"})
+            box.animate({height: '300px' , opacity: '0.5'}, 'slow')
+            box.animate({width: '300px' , opacity: '0.8'}, 'slow')
+            box.animate({height: '80px' , opacity: '0.5'}, 'slow')
+            box.animate({width: '80px' , opacity: '0.9'}, 'slow')
+        });
+    })
+</script>
+</html>
