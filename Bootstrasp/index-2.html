@@ -294,11 +294,11 @@
                 
                 if(TxtFirstnameFlag==true && TxtLastnameFlag==true && TxtEmailidFlag==true && TxtContactNoFlag==true)
                 {
-                    alert("Form Submitted Successfully..!!");
+                    // alert("Form Submitted Successfully..!!");
+                    $('#success_message').show()
                 }
                 else{
-                    $('#success_message').show()
-                    /* alert("Invalid Form Inputs..!!"); */
+                    alert("Invalid Form Inputs..!!");
                 }
             });
 
