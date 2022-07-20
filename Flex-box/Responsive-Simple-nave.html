@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Simple Nave</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .nav-bar{
+            display: flex;            
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            text-align: center;
+            background: rgb(28, 1, 1);
+            color: rgb(58, 251, 116);
+            padding: 0 20px;
+        }
+        .nav-bar ul
+        {
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+        }
+        .nav-bar ul li{
+            list-style: none;
+        }
+        .nav-bar ul li a{
+            display: inline-block;
+            padding: 10px 20px;
+            color: rgb(58, 251, 116);
+            text-decoration: none;
+            margin: 5px;
+        }
+        .nav-bar ul li a:hover{
+            color: rgb(28, 1, 1);
+            background: rgb(58, 251, 116);
+            border-radius: 25px;
+        }
+        @media all and (max-width: 599px){
+            .nav-bar
+            {
+                flex-flow: column;
+                padding: 0;
+            }
+            .nav-bar ul
+            {
+                border-bottom: solid 2px rgb(58, 251, 116);
+                width: 100%;
+            }
+        }
+        </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-bar">
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">About us</a></li>
+                <li><a href="">Service</a></li>
+                <li><a href="">Products</a></li>
+                <li><a href="">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+</body>
+</html>
