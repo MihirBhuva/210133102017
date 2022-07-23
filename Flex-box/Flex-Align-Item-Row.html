@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    h1{
+        text-align: center;
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+        background: rgb(73, 73, 73);
+        color: white;
+        padding: 15px;
+        animation: colorchanger 4s infinite ease-in-out;
+    }
+    @keyframes colorchanger {
+        0%,100%{
+            color: red;
+        }
+        25%{
+            color: rgba(0, 254, 0, 0.992);
+        }   
+        50%{
+            color: rgb(255, 208, 0);
+        }   
+        75%{
+            color: rgb(255, 136, 0);
+        }   
+    }
+    .flex{
+            display: flex;
+            /* flex-wrap: wrap; */
+            border: 3px solid red;
+            margin-top: 10px;
+    }
+    .center{
+        align-content: center;
+         height: 300px; 
+        align-items: baseline;
+    }
+    .flex-end{
+            border: 3px solid red;
+           height: 300px; 
+            align-content: flex-end;
+    }
+    .flex-start{
+       height: 300px; 
+        
+        align-content: flex-start;
+    }
+    .flex-space-around
+    {
+       height: 300px; 
+        
+        justify-content: space-around;
+        align-items: center;
+    }
+    .flex-space-between
+    {
+       height: 300px; 
+        
+        justify-content: space-between;
+        align-items: center;
+    }
+    .flex-column-stretch
+    {
+       height: 300px; 
+        
+        align-content: stretch;
+    }
+       .box{
+        width: 100px;
+        height: 50px;
+        background: rgb(255, 255, 255);
+        color: rgb(0, 0, 0);
+        border: 1px solid black;
+        margin: 5px;
+        text-align: center;
+       }
+       .box:nth-child(odd){
+        background: black;
+        border: solid 1px rgb(163, 163, 163);
+        color: white;
+    }
+    .box:nth-child(3){
+        background: rgb(211, 47, 47);
+        font-size: 30px;
+        border: solid 1px rgb(163, 163, 163);
+        color: white;
+        padding: 20px;
+       }
+    .box:nth-child(5){
+        background: rgb(211, 47, 47);
+        font-size: 30px;
+        border: solid 1px rgb(163, 163, 163);
+        color: white;
+        padding: 20px;
+        padding-bottom: 2rem;
+       }
+       .box1{
+        /* width: 100px; */
+        height: 50px;
+        background: rgb(255, 255, 255);
+        color: rgb(0, 0, 0);
+        border: 1px solid black;
+        margin: 5px;
+        text-align: center;
+       }
+       .box1:nth-child(odd){
+        background: black;
+        border: solid 1px rgb(163, 163, 163);
+        color: white;
+       }
+       .box1:nth-child(3){
+        height: 80px;
+        background: rgb(255, 109, 109);
+        border: solid 1px rgb(163, 163, 163);
+        color: white;
+       }
+    </style>
+</head>
+<body>
+    <h1>Flex-center</h1>
+    <div class="flex center">
+        <div class="box">Box-1</div>
+        <div class="box">Box-2</div>
+        <div class="box">Box-3</div>
+        <div class="box">Box-4</div>
+        <div class="box">Box-5</div>
+        <div class="box">Box-6</div>
+        <div class="box">Box-7</div>
+        <div class="box">Box-8</div>
+        <div class="box">Box-9</div>
+        <div class="box">Box-10</div>
+    </div>
+    <h1>Flex-End</h1>
+    <div class="flex flex-end">
+        <div class="box">Box-1</div>
+        <div class="box">Box-2</div>
+        <div class="box">Box-3</div>
+        <div class="box">Box-4</div>
+        <div class="box">Box-5</div>
+        <div class="box">Box-6</div>
+        <div class="box">Box-7</div>
+        <div class="box">Box-8</div>
+        <div class="box">Box-9</div>
+        <div class="box">Box-10</div>
+    </div>
+    <h1>Flex-Start</h1>
+    <div class="flex flex-start">
+        <div class="box">Box-1</div>
+        <div class="box">Box-2</div>
+        <div class="box">Box-3</div>
+        <div class="box">Box-4</div>
+        <div class="box">Box-5</div>
+        <div class="box">Box-6</div>
+        <div class="box">Box-7</div>
+        <div class="box">Box-8</div>
+        <div class="box">Box-9</div>
+        <div class="box">Box-10</div>
+    </div>
+    <h1>Flex-Space-Around</h1>
+    <div class="flex flex-space-around">
+        <div class="box">Box-1</div>
+        <div class="box">Box-2</div>
+        <div class="box">Box-3</div>
+        <div class="box">Box-4</div>
+        <div class="box">Box-5</div>
+        <div class="box">Box-6</div>
+        <div class="box">Box-7</div>
+        <div class="box">Box-8</div>
+        <div class="box">Box-9</div>
+        <div class="box">Box-10</div>
+    </div>
+    <h1>Flex-Space-Around</h1>
+    <div class="flex flex-space-between">
+        <div class="box">Box-1</div>
+        <div class="box">Box-2</div>
+        <div class="box">Box-3</div>
+        <div class="box">Box-4</div>
+        <div class="box">Box-5</div>
+        <div class="box">Box-6</div>
+        <div class="box">Box-7</div>
+        <div class="box">Box-8</div>
+        <div class="box">Box-9</div>
+        <div class="box">Box-10</div>
+    </div>
+    <h1>Flex-column-stretch</h1>
+    <div class="flex flex-column-stretch">
+        <div class="box1">Box-1</div>
+        <div class="box1">Box-2</div>
+        <div class="box1">Box-3</div>
+        <div class="box1">Box-4</div>
+        <div class="box1">Box-5</div>
+        <div class="box1">Box-6</div>
+        <div class="box1">Box-7</div>
+        <div class="box1">Box-8</div>
+        <div class="box1">Box-9</div>
+        <div class="box1">Box-10</div>
+    </div>
+</body>
+</html>
