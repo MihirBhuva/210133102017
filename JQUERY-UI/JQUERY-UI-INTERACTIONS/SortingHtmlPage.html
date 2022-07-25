@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorting JQuery UI</title>
+      <link href = "https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel = "stylesheet" type="text/css">
+      <script src = "https://code.jquery.com/jquery-1.10.2.js" type="text/javascript"></script>
+      <script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js" type="text/javascript"></script>
+      
+      <style type="text/css">
+         #sortable-1, #sortable-2 { 
+            list-style-type: none; 
+            margin: 0; 
+            padding: 0; 
+            width: 50%; 
+        }
+         #sortable-1 li, #sortable-2 li { margin:10px; 
+            padding:20px;
+            font-size: 17px; 
+            height: 16px; 
+        }
+         .default {
+            background: #f78000;
+            border: 1px solid #DDDDDD;
+            color: #1e1919;
+         }
+         
+      </style>
+      
+      <script type="text/javascript">
+          $(document).ready(function () {
+              
+			  $("#sortable-1").sortable();
+            
+			  $("#sortable-2").sortable();
+			  
+			  $("#sortable-1").sortable({
+                  connectWith: "#sortable-2, #sortable-1"
+              });
+			  
+              $("#sortable-2").sortable({
+                  connectWith: "#sortable-1, #sortable-2"
+              });
+			 
+		  });
+      </script>
+   </head>
+   
+   <body>
+      <div class = "wrap">
+         <div class = "wrap1"> 
+            <h2 style="margin-left: 22%;">List 1</h2>
+            <ul id = "sortable-1">
+               <li class = "default">Option-A</li>
+               <li class = "default">Option-B</li>
+               <li class = "default">Option-C</li>
+               <li class = "default">Option-D</li>
+            </ul>
+         </div>
+         <div class = "wrap1">
+            <h2 style="margin-left: 22%;">List 2</h2> 
+            <ul id = "sortable-2">
+               <li class = "default">Sub-Part a</li>
+               <li class = "default">Sub-Part b</li>
+               <li class = "default">Sub-Part c</li>
+               <li class = "default">Sub-Part d</li>
+            </ul>
+         </div>
+      </div>
+      <hr />
+      <span id = result></span>
+   </body>
+</html>

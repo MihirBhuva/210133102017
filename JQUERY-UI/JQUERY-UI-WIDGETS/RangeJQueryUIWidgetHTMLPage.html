@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Range Slider Control</title>
+    <link href = "https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel = "stylesheet" type="text/css" />
+    <script src = "https://code.jquery.com/jquery-1.10.2.js" type="text/javascript"></script>
+    <script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js" type="text/javascript"></script>
+      
+      <script type="text/javascript">
+          $(document).ready(function() {
+              $("#AgeRangeSlider").slider({
+                  orientation:"horizontal",
+                  min: 18,
+                  max: 100,
+                  value: 20,
+                  slide: function (event, ui) {
+                      $("#AgeValue").val(ui.value);
+                  }
+              });
+              $("#AgeValue").val($("#AgeRangeSlider").slider("value"));
+
+              $("#PriceValue").slider({
+                  range: true,
+                  min: 1,
+                  max: 5000,
+                  values: [1, 50],
+                  start: function (event, ui) {
+                      $("#startvalue")
+                     .val("$" + ui.values[0]);
+                  },
+                  stop: function (event, ui) {
+                      $("#endvalue")
+                     .val("$" + ui.values[1]);
+                  },
+                  change: function (event, ui) {
+                      $("#changevalue")
+                     .val("$" + ui.values[0] + " - $" + ui.values[1]);
+                  },
+                  slide: function (event, ui) {
+                      $("#slidevalue")
+                     .val("$" + ui.values[0] + " - $" + ui.values[1]);
+                  }
+              });
+          });
+      </script>
+
+      <style>
+            fieldset{
+                margin: 0 auto;
+                padding: 25px;
+                width: 400px;
+                box-shadow: 11px 14px 8px 0px #00000042,
+                            inset -5px -5px 5px 0px rgb(255 255 255 / 71%);
+                background: rgba(255, 255, 255, 0.188);
+                border-radius: 25px;
+            }
+            label{
+                text-shadow: 1px -1px 1px #c9c9c9;
+            }
+            body{
+                background: green;
+            }
+      </style>
+   </head>
+   
+   <body>
+    <center><h1>Search Hotel According to Your Budget!</h1></center>
+    <fieldset>
+
+        <p>
+            <label for="AgeValue">Enter Your Age:</label>
+            <input type="text" id="AgeValue" disabled="true"/>
+        </p>
+        
+        <div id="AgeRangeSlider"></div>
+        
+        <hr />
+        
+        <div id = "PriceValue"></div>
+        
+        <p>
+            <label for = "startvalue">Start Value:</label>
+            <input type = "text" id = "startvalue" disabled="true">
+        </p>
+      <p>
+          <label for = "endvalue">End Value:</label>
+          <input type = "text" id = "endvalue" disabled="true">
+        </p>
+        <p>
+            <label for = "changevalue">Change In Range:</label>
+            <input type = "text" id = "changevalue" disabled="true">
+        </p>
+        <p>
+            <label for = "slidevalue">Slide Gap Value:</label>
+            <input type = "text" id = "slidevalue" disabled="true">
+        </p>
+        
+    </fieldset>
+    </body>
+    </html>

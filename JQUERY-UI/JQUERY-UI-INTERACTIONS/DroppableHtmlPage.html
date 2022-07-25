@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>jQuery UI Droppable</title>
+      <link href = "https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel = "stylesheet" />
+      <script src = "https://code.jquery.com/jquery-1.10.2.js" type="text/javascript"></script>
+      <script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js" type="text/javascript"></script>
+      <style type="text/css">
+		.box-2 {
+            background:rgb(255, 84, 71);
+            border: 1px solid Gray;
+            color: #000000;
+            font-weight: bold;
+         }
+         .box-1 {
+            background: rgb(255, 255, 0);
+            border: 1px solid #DDDDDD;
+            color: #ff0000;
+         }
+		 .MyCls{background-color:#00ff0d;color:#FFFFFF}
+         #boxId { 
+            width: 200px; 
+            height: 200px; 
+            padding: 10px; 
+            margin: 0px 5px 10px 0; 
+         }
+         
+         #box-2Id{ 
+            width: 250px;
+            height: 250px;
+            padding: 10px; 
+            margin: 10px;  
+         }
+      </style>
+      <script type="text/javascript">
+         $(document).ready(function () {
+		  
+              $("#boxId").draggable();
+
+              $("#box-2Id").droppable({ 
+                  accept: "#boxId",
+                  drop:function(event, ui) {
+                      $(this).addClass("MyCls").find("p").html("Your Life is Changed!");
+					  
+                  }
+              });
+			  
+          });
+      </script>
+   </head>
+   <body>
+         <div id="boxId" class = "box-1">
+            <p>Change your life by aligning this square into another square!</p>
+         </div><hr/>
+         <div id="box-2Id" class = "box-2">
+            <p>Align The Square here to change your life!</p>
+         </div>
+   </body>
+</html>
